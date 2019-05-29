@@ -23,7 +23,7 @@ macro_rules! LCG {
 
             #[inline]
             fn next_u64(&mut self) -> u64 {
-                self.next_u32() as u64
+                impls::next_u64_via_fill(self)
             }
 
             #[inline]
