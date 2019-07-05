@@ -5,7 +5,7 @@ authors = ["Malcolm Ramsay <malramsay64@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-itertools = "~0.6.0"
+itertools = "~0.8.0"
 rand_core = "~0.4"
 rand = "~0.6"
 rand_pcg = "~0.1.2"
