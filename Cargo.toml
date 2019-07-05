@@ -6,7 +6,7 @@ edition = "2018"
 
 [dependencies]
 itertools = "~0.8.0"
-rand_core = "~0.4"
+rand_core = "~0.5"
 rand = "~0.6"
 rand_pcg = "~0.2.0"
 rand_xorshift = "~0.2.0"
