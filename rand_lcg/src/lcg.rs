@@ -23,7 +23,7 @@ macro_rules! LCG {
 
             #[inline]
             fn next_u64(&mut self) -> u64 {
-                impls::next_u64_via_fill(self)
+                impls::next_u64_via_u32(self)
             }
 
             #[inline]
@@ -57,14 +57,13 @@ LCG!(CPP, (1u32 << 31) - 1, 48271, 0);
 #[cfg(test)]
 mod tests {
     use super::*;
-    use rand::Rng;
 
     #[test]
     fn test_invariant() {
         LCG!(TestZero, 2 ^ 31, 0, 0);
         let mut rng = TestZero::from_seed([0; 4]);
         for _ in 0..10 {
-            assert!(rng.next_u64() == 0);
+            assert!(rng.next_u32() == 0);
         }
     }
 
@@ -76,6 +75,27 @@ mod tests {
             let val: u32 = rng.next_u32();
             println!("value: {} i: {}", val, i);
             assert!(val == i + 1);
+        }
+    }
+
+    #[test]
+    fn test_next_u32() {
+        LCG!(TestZero, 1 << 31, 1, 1);
+        let mut rng = TestZero::from_seed([0; 4]);
+        for i in 1..=10 {
+            let val: u32 = rng.next_u32();
+            println!("value: {} i: {}", val, i);
+            assert!(val == i);
+        }
+    }
+
+    #[test]
+    fn test_next_u64() {
+        LCG!(TestZero, 1 << 31, 1, 1);
+        let mut rng = TestZero::from_seed([0; 4]);
+        for i in 1..=10 {
+            let val = rng.next_u64();
+            println!("value: {} i: {}", val, i);
         }
     }
 }
