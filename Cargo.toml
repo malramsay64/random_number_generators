@@ -6,10 +6,11 @@ edition = "2018"
 
 [dependencies]
 itertools = "~0.8.0"
-rand_core = "~0.4"
-rand = "~0.6"
+rand_core = "~0.5.0"
+rand = "~0.7.0"
 rand_pcg = "~0.2.0"
 rand_xorshift = "~0.2.0"
-rand_xoshiro = "~0.2.0"
+rand_xoshiro = "~0.3.0"
 clap = "~2.33"
-sfmt = "~0.5.0"
+rand_lcg = {path="rand_lcg", version="0.1"}
+sfmt = {path="rand_sfmt", version="0.5"}
