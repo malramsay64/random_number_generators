@@ -1,3 +1,3 @@
 [submodule "rand_sfmt"]
 	path = rand_sfmt
-	url = git@github.com:malramsay64/sfmt.git
+	url = https://github.com/malramsay64/sfmt.git
