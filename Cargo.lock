@@ -184,7 +184,7 @@ dependencies = [
  "rand_pcg 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "rand_xorshift 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "rand_xoshiro 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "sfmt 0.5.0",
+ "sfmt 0.5.0 (git+https://github.com/malramsay64/sfmt.git)",
 ]
 
 [[package]]
@@ -203,8 +203,8 @@ dependencies = [
 [[package]]
 name = "sfmt"
 version = "0.5.0"
+source = "git+https://github.com/malramsay64/sfmt.git#ec534b6d06db7da387c28c67b838381459704a03"
 dependencies = [
- "rand 0.7.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "rand_core 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -290,6 +290,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 "checksum rand_xoshiro 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)" = "0be70256657904bb6ee9b4bca1776ade789a05710eeff2a9292323a6f2c3831f"
 "checksum redox_syscall 0.1.56 (registry+https://github.com/rust-lang/crates.io-index)" = "2439c63f3f6139d1b57529d16bc3b8bb855230c8efcc5d3a896c8bea7c3b1e84"
 "checksum redox_termios 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "7e891cfe48e9100a70a3b6eb652fef28920c117d366339687bd5576160db0f76"
+"checksum sfmt 0.5.0 (git+https://github.com/malramsay64/sfmt.git)" = "<none>"
 "checksum spin 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)" = "44363f6f51401c34e7be73db0db371c04705d35efbe9f7d6082e03a921a32c55"
 "checksum strsim 0.8.0 (registry+https://github.com/rust-lang/crates.io-index)" = "8ea5119cdb4c55b55d432abb513a0429384878c15dde60cc77b1c99de1a95a6a"
 "checksum termion 1.5.3 (registry+https://github.com/rust-lang/crates.io-index)" = "6a8fb22f7cde82c8220e5aeacb3258ed7ce996142c77cba193f203515e26c330"
