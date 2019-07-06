@@ -57,14 +57,14 @@ LCG!(CPP, (1u32 << 31) - 1, 48271, 0);
 #[cfg(test)]
 mod tests {
     use super::*;
-    use rand::prelude::*;
+    use rand::Rng;
 
     #[test]
     fn test_invariant() {
         LCG!(TestZero, 2 ^ 31, 0, 0);
         let mut rng = TestZero::from_seed([0; 4]);
         for _ in 0..10 {
-            assert!(rng.gen::<u64>() == 0);
+            assert!(rng.next_u64() == 0);
         }
     }
 
@@ -73,8 +73,8 @@ mod tests {
         LCG!(TestZero, 1 << 31, 1, 1);
         let mut rng = TestZero::from_seed([0; 4]);
         for i in 0..10 {
-            let val: u32 = rng.gen();
-            println!("Value: {} i: {}", val, i);
+            let val: u32 = rng.next_u32();
+            println!("value: {} i: {}", val, i);
             assert!(val == i + 1);
         }
     }

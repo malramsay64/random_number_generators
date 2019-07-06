@@ -1,0 +1,10 @@
+[package]
+name = "rand_lcg"
+version = "0.1.0"
+authors = ["Malcolm Ramsay <malramsay64@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+edition = "2018"
+
+[dependencies]
+rand_core = "0.5"

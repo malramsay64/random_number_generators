@@ -6,10 +6,10 @@
 
 use itertools::Itertools;
 use rand::prelude::*;
+use rand_lcg::{ANSIC, CPP, RANDU};
 use rand_pcg::Pcg32;
 use rand_xorshift::XorShiftRng;
 use rand_xoshiro::Xoroshiro128StarStar;
-use random_number_generators::{ANSIC, CPP, RANDU};
 use sfmt::SFMT;
 
 use clap::{arg_enum, value_t, App, Arg};
