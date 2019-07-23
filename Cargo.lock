@@ -203,8 +203,9 @@ dependencies = [
 [[package]]
 name = "sfmt"
 version = "0.5.0"
-source = "git+https://github.com/malramsay64/sfmt.git#ec534b6d06db7da387c28c67b838381459704a03"
+source = "git+https://github.com/malramsay64/sfmt.git#e2d6a1fd46d0ce671bcb19f1a635a17f8df384b4"
 dependencies = [
+ "rand 0.7.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "rand_core 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
