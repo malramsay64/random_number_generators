@@ -16,6 +16,6 @@ rand = "~0.7.0"
 rand_pcg = "~0.2.0"
 rand_xorshift = "~0.2.0"
 rand_xoshiro = "~0.3.0"
+sfmt = {version="0.6.0", default-features=false}
 clap = "~2.33"
 rand_lcg = {path="rand_lcg", version="0.1"}
-sfmt = {version="0.5", git="https://github.com/malramsay64/sfmt.git"}
