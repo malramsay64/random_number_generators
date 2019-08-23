@@ -1,0 +1,7 @@
+name: rng
+dependencies:
+  - pandoc==2.7.3
+  - conda-forge::tectonic==0.1.11
+  - malramsay::biber==2.11
+  - conda-forge::cairosvg==2.4.0
+  - conda-forge::pandoc-crossref==0.3.4.0.3
