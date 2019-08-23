@@ -1,4 +1,18 @@
-# Random Number Generators
+---
+title: Random Numbers
+author: Malcolm Ramsay
+
+aspectratio: 169
+fontsize: 12
+header-includes: |
+    \makeatletter
+    \def\input@path{{usyd-beamer-theme/}}
+    \makeatother
+    \graphicspath{{usyd-beamer-theme/}}
+    \usetheme{usyd}
+---
+
+## Perlin Noise
 
 ::: notes
 
@@ -15,6 +29,8 @@ How would you define a random number?
 - Sequence which can't be predicted
 - numbers which adhere to a distribution
 - sequence of numbers with no autocorrelation
+
+:::
 
 ## Pseudo Random Numbers
 
@@ -51,13 +67,29 @@ However, you *never* want to be using a LCG.
 Why?
 Let me tell you a story about RANDU
 
+:::
+
 ## RANDU
 
- :: notes
+::::::: {.columns}
+::: {.column width=50%}
+Default random number generator in early versions of FORTRAN
+
+$$ X_{n+1} = 65539 X_n ~ \text{mod}~2^{31} $$
+
+. . .
+
+:::
+::: {.column width=50%}
+![](figures/randu.png)
+:::
+::::::
+
+::: notes
 
 This is a random number generator with the relation
 
-$$ X_{n+1} = $65539 X_n$ mod 2^{31} $$
+$$ X_{n+1} = 65539 X_n mod 2^{31} $$
 
 It was developed by IBM in the early 60s
 and used for being simple to calculate,
@@ -73,12 +105,50 @@ all the generated points lie on one of 15 planes,
 which is fairly clearly an indication
 not a good thing.
 
+:::
+
+## RANDU
+
+::: incremental
+
+- Issues known in 1963
+- Widely used throughout the early 70s
+- Still implemented in[1999](http://h30266.www3.hpe.com/odl/unix/progtool/cf95au56/dflrm.htmhttp://h30266.www3.hpe.com/odl/unix/progtool/cf95au56/dflrm.htm) and [2001](http://jp.xlsoft.com/documents/intel/cvf/cvf_lref.pdf)
+
+:::
+
+::: notes
+
 Now this was known about in 1963,
 however, it was still widely used as a PRNG
 throughout the 70s,
-widely used within FORTRAN,
-which means it took a long time to deprecate,
-still found in a [manual from 1999](http://h30266.www3.hpe.com/odl/unix/progtool/cf95au56/dflrm.htmhttp://h30266.www3.hpe.com/odl/unix/progtool/cf95au56/dflrm.htm)
+particularly with FORTRAN.
+It took so long to deprecate it,
+and it is still probably being used.
+
+:::
+
+## How do we identify a 'bad' PRNG?
+
+### Test U01
+- Birthday Spacings tests
+- Information Entropy tests
+- Spectral Density tests
+
+. . .
+
+### Big Crush
+- Uses $2^{38}$ random numbers
+- 106 different tests
+
+::: notes
+
+- A standardised test suite
+- Extensive
+- BigCrush
+    - Takes hours to run
+
+:::
 
 ## What do we use currently?
 
@@ -104,7 +174,7 @@ Rust
 : Xorshift (rand)
 
 ::: notes
-
+:::
 
 ## What makes a good random number generator
 
@@ -114,7 +184,7 @@ what is a good PRNG?
 
 - tests of randomness
 - long sequence length
-    - only want to take $\sqrt{2]$ of the entire sequence
+    - only want to take $\sqrt{2}$ of the entire sequence
     - come across issues of replacement
 
 ## Are they any good?
@@ -129,6 +199,8 @@ In all these random number generators,
 it is possible to work out the state
 from the sequence of numbers.
 
+:::
+
 ## CSPRNG
 
 ::: notes
@@ -139,7 +211,12 @@ from the sequence of numbers.
         - two factor authentication tokens
     - games
 
+:::
+
 ## What if we do want 'true' randomness
+
+- (Random.org)[https://random.org]
+- (NIST)[https://beacon.nist.gov/beacon/2.0/chain/1/pulse/511433]
 
 ::: notes
 
@@ -159,6 +236,8 @@ from the sequence of numbers.
   which is then iterated on for a period of time before being re-seeded from the random
   number generator
 
+:::
+
 ## Cloudflare
 
 ::: notes
@@ -172,3 +251,5 @@ from the sequence of numbers.
       they think it is.
     - As a 'backup' source of randomness use lava lamps
     - Nothing quite like the real world for messing things up.
+
+:::
