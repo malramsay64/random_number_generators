@@ -3,12 +3,13 @@
 # Malcolm Ramsay, 2019-08-23 14:35
 #
 
-all: slides.pdf
+all: main.pdf
 
+main.pdf: main.tex slides.tex
+	tectonic $<
 
-slides.pdf: slides.md
+slides.tex: slides.md
 	pandoc -t beamer $< -o $@
-
 
 
 # vim:ft=make

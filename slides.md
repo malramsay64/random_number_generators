@@ -1,18 +1,9 @@
 ---
 title: Random Numbers
 author: Malcolm Ramsay
-
-aspectratio: 169
-fontsize: 12
-header-includes: |
-    \makeatletter
-    \def\input@path{{usyd-beamer-theme/}}
-    \makeatother
-    \graphicspath{{usyd-beamer-theme/}}
-    \usetheme{usyd}
 ---
 
-## Perlin Noise
+## What are Random Numbers?
 
 ::: notes
 
