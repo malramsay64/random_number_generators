@@ -2,8 +2,35 @@
 %
 \documentclass[aspectratio=169,14pt]{beamer}
 
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{microtype}
+
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% Keep figure aspect ratio the same when converting from markdown
+% Scale images if necessary, so that they will not overflow the page
+% margins, while still makin possible to overwrite the defaults.
+% This has the added benefit of being able to specify one of width or height
+% and the aspect ratio is preserved.
+\makeatletter
+\def\maxwidth{%
+  \ifdim\Gin@nat@width>\linewidth%
+    \linewidth%
+  \else%
+    \Gin@nat@width%
+  \fi%
+}
+\def\maxheight{
+  \ifdim\Gin@nat@height>\textheight%
+    \textheight%
+  \else%
+    \Gin@nat@height%
+  \fi%
+}
+\makeatother
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 
 \author{Malcolm Ramsay}
 \title{Random Numbers}
