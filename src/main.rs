@@ -36,7 +36,7 @@ arg_enum! {
 ///
 fn generate_numbers<R: Rng + ?Sized>(rng: &mut R, samples: u64, dimensions: u64) {
     for _ in 0..samples {
-        println!("{}", (0..dimensions).map(|_| rng.gen::<u64>()).format(", "));
+        println!("{}", (0..dimensions).map(|_| rng.gen::<u32>()).format(", "));
     }
 }
 
