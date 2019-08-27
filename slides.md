@@ -182,20 +182,20 @@ How do we identify a bad PRNG?
 
 :::
 
-## Test U01
+## Statistical Tests
 
-- Contains many statistical tests
-    - Coin flip tests
-    - Birthday Spacings tests
-    - Information Entropy tests
-    - Spectral Density tests
+- Coin flip tests
+- Birthday Spacings tests
+- Information Entropy tests
+- Spectral Density tests
 
-. . .
+## Statistical Test Suites
 
-- Divided into groups
-    - Small Crush
-    - Crush
-    - Big Crush
+- [TestU01]
+- [DIEHARD]
+- [DIEHARDER]
+- [NIST][NIST Statistical Test Suite]
+- [PracRand]
 
 
 ::: notes
@@ -219,23 +219,17 @@ Each of the tests are divided up into groups,
 with the Big Crush taking about 14 hours to complete,
 running 106 different tests.
 
-There are also the
-- DIEHARD
-- DIEHARDER
-- NIST Statistical Test Suite
-- PractRand
-
 :::
 
 
 ## Are they any good?
 
- PRNG               Failures           Period
- ---------------- ----------  ---------------
- LCG                11-22            $2^{31}$
- Mersenne Twister     4        $2^{19937} -1$
- Xorshift*            0          $2^{128} -1$
- PCG                    0           $2^{128}$
+ PRNG             Failures[@ONeill2014]           Period
+ ---------------- ---------------------  ---------------
+ LCG                              11-22         $2^{31}$
+ Mersenne Twister                     4   $2^{19937} -1$
+ Xorshift*                            0     $2^{128} -1$
+ PCG                                  0        $2^{128}$
 
 ::: notes
 
@@ -333,13 +327,17 @@ with more truly random data.
 
 :::
 
-## Cloudflare
+## LavaRand
 
 \center
 
-![](figures/lava-lamps-camera.jpg){#fig:lava}
+![](figures/lavarand.jpg)[^1]
+
+[^1]: Image courtesy of [@mahtin](https://twitter.com/mahtin/status/888251632550424577)
 
 :::notes
+
+- Developed and patented by Silicon Graphics in 1996 [@Noll1998]
 
  - Web security is their business
     - Use random number generators extensively
@@ -352,3 +350,23 @@ with more truly random data.
     - Nothing quite like the real world for messing things up.
 
 :::
+
+## Resources
+
+- [PCG Paper [@ONeill2014]][PCG Paper]
+- [LavaRand]
+- Good Random number generators are (not so) easy to find [@Hellekalek1998]
+- [Random.org][random.org intro]
+
+## Bibliography
+
+\small
+
+[PCG Paper]: http://www.pcg-random.org/pdf/hmc-cs-2014-0905.pdf
+[DIEHARD]: https://en.wikipedia.org/wiki/Diehard_tests
+[DIEHARDER]: https://webhome.phy.duke.edu/~rgb/General/dieharder.php
+[NIST Statistical Test Suite]: https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-22r1a.pdf
+[TestU01]: http://simul.iro.umontreal.ca/testu01/tu01.html
+[PracRand]: https://sourceforge.net/projects/pracrand/
+[LavaRand]: https://blog.cloudflare.com/lavarand-in-production-the-nitty-gritty-technical-details/
+[random.org intro]: https://www.random.org/randomness/
