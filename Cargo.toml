@@ -3,6 +3,14 @@ name = "random_number_generators"
 version = "0.2.0"
 authors = ["Malcolm Ramsay <malramsay64@gmail.com>"]
 edition = "2018"
+description = "A command line tool to compare a range of PRNGs."
+repository = "https://github.com/malramsay64/random_number_generators"
+readme = "README.md"
+license = "MIT"
+categories = ["command-line-utilities", "science"]
+keywords = ["random", "PRNG"]
+
+
 
 [workspace]
 members = [
