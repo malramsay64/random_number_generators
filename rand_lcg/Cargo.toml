@@ -3,8 +3,9 @@ name = "rand_lcg"
 version = "0.1.0"
 authors = ["Malcolm Ramsay <malramsay64@gmail.com>"]
 license = "MIT"
-readme = "README.md"
+readme = "README"
 edition = "2018"
+repository = "https://github.com/malramsay64/rand_lcg"
 
 [dependencies]
 rand_core = "0.5"
