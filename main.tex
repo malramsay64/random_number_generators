@@ -6,11 +6,18 @@
 \usepackage{longtable}
 \usepackage{microtype}
 
+\makeatletter
+  \def\input@path{{usyd-beamer-theme/}}
+\makeatother
+\graphicspath{{usyd-beamer-theme/}{figures/}}
+
+\usetheme{usyd}
+
 \providecommand{\tightlist}{}
 
 % Keep figure aspect ratio the same when converting from markdown
 % Scale images if necessary, so that they will not overflow the page
-% margins, while still makin possible to overwrite the defaults.
+% margins, while still making it possible to overwrite the defaults.
 % This has the added benefit of being able to specify one of width or height
 % and the aspect ratio is preserved.
 \makeatletter
@@ -31,15 +38,10 @@
 \makeatother
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 
+
 \author{Malcolm Ramsay}
 \title{Random Numbers}
-
-\makeatletter
-  \def\input@path{{usyd-beamer-theme/}}
-\makeatother
-\graphicspath{{usyd-beamer-theme/}}
-
-\usetheme{usyd}
+\titlegraphic{config_crop.png}
 
 \begin{document}
 \begin{frame}[t]{}
