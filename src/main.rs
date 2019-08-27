@@ -7,7 +7,7 @@
 use itertools::Itertools;
 use rand::prelude::*;
 use rand_lcg::{ANSIC, CPP, RANDU};
-use rand_pcg::Pcg32;
+use rand_pcg::Pcg64;
 use rand_xorshift::XorShiftRng;
 use rand_xoshiro::Xoroshiro128StarStar;
 use sfmt::SFMT;
@@ -82,7 +82,7 @@ fn main() {
         Generators::TWISTER => {
             generate_numbers(&mut SFMT::seed_from_u64(seed), samples, dimensions)
         }
-        Generators::PCG => generate_numbers(&mut Pcg32::seed_from_u64(seed), samples, dimensions),
+        Generators::PCG => generate_numbers(&mut Pcg64::seed_from_u64(seed), samples, dimensions),
         Generators::XORSHIFT => {
             generate_numbers(&mut XorShiftRng::seed_from_u64(seed), samples, dimensions)
         }
