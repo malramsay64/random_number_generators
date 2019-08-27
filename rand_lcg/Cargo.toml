@@ -6,6 +6,7 @@ license = "MIT"
 readme = "README.md"
 edition = "2018"
 repository = "https://github.com/malramsay64/rand_lcg"
+description = "An implementation of the LCG family of PRNGs for educational purposes."
 
 [dependencies]
 rand_core = "0.5"
