@@ -5,3 +5,6 @@ dependencies:
   - malramsay::biber==2.11
   - conda-forge::cairosvg==2.4.0
   - conda-forge::pandoc-crossref==0.3.4.0.3
+  - python=3.7
+  - matplotlib=3.0
+  - numpy=1.17
