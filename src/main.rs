@@ -63,7 +63,7 @@ fn main() {
         .arg(
             Arg::with_name("num_samples")
                 .short("n")
-                .long("num_samples")
+                .long("num-samples")
                 .default_value("10")
                 .takes_value(true)
                 .help("Number of rows of data to generate."),
