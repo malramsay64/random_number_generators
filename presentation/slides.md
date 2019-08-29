@@ -365,6 +365,12 @@ with more truly random data.
 
 :::
 
+## Slides
+
+\large
+
+[github.com/malramsay64/random_number_generators][presentation]
+
 ## Resources
 
 - [PCG Paper [@ONeill2014]][PCG Paper]
@@ -386,3 +392,4 @@ with more truly random data.
 [LavaRand]: https://blog.cloudflare.com/lavarand-in-production-the-nitty-gritty-technical-details/
 [random.org intro]: https://www.random.org/randomness/
 [rand harmful]: https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful
+[presentation]: https://github.com/malramsay64/random_number_generators
