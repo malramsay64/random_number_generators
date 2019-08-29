@@ -42,7 +42,7 @@ fn generate_numbers<R: Rng + ?Sized>(rng: &mut R, samples: u64, dimensions: u64)
 
 fn main() {
     let matches = App::new("Random Number Generator")
-        .version("0.2.0")
+        .version("0.2.1")
         .author("Malcolm Ramsay <malramsay64@gmail.com>")
         .about("Generates random numbers using a range of different algorithms")
         .arg(

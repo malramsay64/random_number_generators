@@ -1,6 +1,6 @@
 [package]
 name = "random_number_generators"
-version = "0.2.0"
+version = "0.2.1"
 authors = ["Malcolm Ramsay <malramsay64@gmail.com>"]
 edition = "2018"
 description = "A command line tool to compare a range of PRNGs."
