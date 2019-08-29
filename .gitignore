@@ -1,2 +1,11 @@
+# Ignore rust compiled files
 /target
 **/*.rs.bk
+
+
+# Ignore Generated slides
+slides.tex
+# Ignore pdf files
+*.pdf
+# except in the figures directory
+!figures/*.pdf
