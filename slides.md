@@ -97,7 +97,11 @@ Let me tell you a story about RANDU
 ::: {.column width=50%}
 Default random number generator in early versions of FORTRAN
 
-$$ X_{n+1} = 65539 X_n ~ \text{mod}~2^{31} $$
+$$ X_{n+1} = 65539~X_n ~ \text{mod}~2^{31} $$
+
+. . .
+
+$$ X_{n+1} =  (2^{16} + 3) X_n ~ \text{mod}~2^{31} $$
 
 . . .
 
@@ -115,7 +119,7 @@ $$ X_{n+1} = 65539 X_n mod 2^{31} $$
 
 It was developed by IBM in the early 60s
 and used for being simple to calculate,
-65539 is $2^16 + 3$,
+65539 is $2^{16} + 3$,
 making the calculation of the next random number super simple,
 basically ignoring the multiplication,
 and doing raw bit operations.
