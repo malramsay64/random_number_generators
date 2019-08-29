@@ -5,6 +5,12 @@ author: Malcolm Ramsay
 
 ## What are Random Numbers?
 
+. . .
+
+- Statistical Randomness
+- Unpredictable Randomness
+- True Randomness
+
 ::: notes
 
 Before we went on a break,
@@ -20,6 +26,10 @@ How would you define a random number?
 - Sequence which can't be predicted
 - numbers which adhere to a distribution
 - sequence of numbers with no correlation
+
+There are three different types of randomness
+which I will be discussing today;
+statistical randomness, unpredictable randomness, and true randomness.
 
 :::
 
@@ -357,6 +367,7 @@ with more truly random data.
 - [LavaRand]
 - Good Random number generators are (not so) easy to find [@Hellekalek1998]
 - [Random.org][random.org intro]
+- [`rand()` considered harmful][rand harmful]
 
 ## Bibliography
 
@@ -370,3 +381,4 @@ with more truly random data.
 [PracRand]: https://sourceforge.net/projects/pracrand/
 [LavaRand]: https://blog.cloudflare.com/lavarand-in-production-the-nitty-gritty-technical-details/
 [random.org intro]: https://www.random.org/randomness/
+[rand harmful]: https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful
