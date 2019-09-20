@@ -25,5 +25,7 @@ rand_pcg = "~0.2.0"
 rand_xorshift = "~0.2.0"
 rand_xoshiro = "~0.3.1"
 sfmt = {version="0.6.0", default-features=false}
-clap = "~2.33"
 rand_lcg = {path="rand_lcg", version="0.1"}
+clap = "~2.33.0"
+structopt = { version = "0.3", features = [ "paw" ] }
+paw = "1.0"
