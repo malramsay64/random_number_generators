@@ -21,7 +21,7 @@ members = [
 itertools = "~0.8.0"
 rand_core = "~0.5.0"
 rand = "~0.7.0"
-rand_pcg = "~0.2.0"
+rand_pcg = "~0.2.1"
 rand_xorshift = "~0.2.0"
 rand_xoshiro = "~0.4.0"
 sfmt = {version="0.6.0", default-features=false}
