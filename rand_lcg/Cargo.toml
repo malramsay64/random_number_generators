@@ -5,7 +5,7 @@ authors = ["Malcolm Ramsay <malramsay64@gmail.com>"]
 license = "MIT"
 readme = "README.md"
 edition = "2018"
-repository = "https://github.com/malramsay64/rand_lcg"
+repository = "https://github.com/malramsay64/random_number_generators"
 description = "An implementation of the LCG family of PRNGs for educational purposes."
 
 [dependencies]
